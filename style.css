@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #2B1D60; 
+    padding: 10px 0;
+    color: white;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo img {
+    width: 120px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    margin-right: 10px;
+}
+
+.search-bar button {
+    background-color: #FF6A00; 
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.right-info p {
+    margin-bottom: 5px;
+}
+
+.right-info a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav {
+    background-color: #411982;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.banner {
+    background-color: #411982;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
+    height: 500px; 
+}
+
+.banner-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.banner-content img {
+    width: 300px;
+}
+
+.banner-text {
+    color: white;
+    text-align: left;
+}
+
+.banner-text h1 {
+    font-size: 60px;
+    font-family: 'Arial Black', sans-serif;
+    letter-spacing: 8px;
+}
+
+.banner-text p {
+    font-size: 26px;
+    margin-top: 15px;
+}
+
+footer {
+    background-color: #f1f1f1;
+    padding: 20px 0;
+    border-top: 3px solid #FF6A00;
+    color: #333;
+    text-align: center;
+    width: 100%;
+    margin-top: auto; 
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 60px; 
+    margin-bottom: 20px; 
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.footer-info p {
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+    padding: 0 10px;
+}
+
+
+@media (max-width: 768px) {
+    .header-container, .banner-content {
+        flex-direction: column;
+    }
+    
+    .banner {
+        padding: 20px;
+        height: auto;
+    }
+
+    .banner-text h1 {
+        font-size: 40px;
+    }
+
+    .banner-text p {
+        font-size: 20px;
+    }
+}
