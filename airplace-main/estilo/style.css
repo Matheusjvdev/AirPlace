@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Limite a largura máxima, se quiser */
+    width: 100%;
+}
+
+.logo-section {
+    flex: 1;
+    text-align: center;
+    margin-right: 20px;
+    margin-bottom: 40px; /* Espaçamento entre o texto e a imagem */
+}
+.logo {
+    max-width: 330px;
+    height: auto; /* Mantém a proporção da imagem */
+    margin-top: 10px; /* Se você quiser mais espaço acima da imagem */
+}
+
+.login-section {
+    flex: 1;
+    background-color: #3D1B99;
+    color: white;
+    padding: 20px; /* aumenta o espaço interno */
+    border-radius: 10px;
+    text-align: center;
+    width: 100%; /* Defina um valor maior, por exemplo, 100% ou uma medida específica */
+    min-width: 320px; /* Valor mínimo para manter o layout responsivo */
+    margin: 0 auto; /* Centraliza a seção, dando espaço igual à esquerda e à direita */
+    height: auto; /* Permite que o conteúdo expanda a altura, você pode definir um valor fixo, se quiser */
+}
+
+.logo-section h1 {
+    font-size: 48px; /* Aumente o tamanho de "Air Place" */
+    font-weight: bold; /* Deixe o texto mais destacado, opcional */
+}
+
+.logo-section p {
+    font-size: 24px; /* Aumente o tamanho de "Qualidade e Velocidade" */
+}
+
+.login-section h2 {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* O estilo para "Dúvida? Fale Conosco" */
+.support {
+    margin-top: 18px; /* Aumenta o espaçamento acima do texto */
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+.support:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para as novas opções "Esqueci minha senha" e "É meu primeiro acesso" */
+.extra-options {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 14px; /* Diminui o tamanho da fonte */
+}
+
+.extra-options a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px; /* Ajusta o espaçamento entre os links */
+    font-size: 16px; /* Aplica o tamanho da fonte nos links */
+}
+
+.extra-options a:hover {
+    text-decoration: underline;
+}

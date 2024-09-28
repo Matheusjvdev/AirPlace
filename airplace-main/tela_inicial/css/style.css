@@ -1,0 +1,296 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+/* Ajustes no Header */
+
+header {
+    background-color: #2B1D60;
+    padding: 10px 0;
+    color: white;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    /* Aumentando o espaçamento lateral */
+}
+
+.logo img {
+    width: 200px;
+    /* Ajuste o tamanho da logo */
+}
+
+
+/*barra de pesquisa*/
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 700px;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 auto;
+    margin-left: 101px;
+}
+
+.search-bar input {
+    flex-grow: 1;
+    max-width: 500px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 2px solid #FF6A00;
+    margin-right: 10px;
+}
+
+.search-bar button {
+    padding: 10px 15px;
+    border-radius: 50%;
+    background-color: #FF6A00;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 16px;
+}
+
+.search-bar button:hover {
+    background-color: #333;
+}
+
+
+/* Ajuste na Right Info */
+
+.right-info {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.right-top {
+    display: flex;
+}
+
+.location-icon i {
+    font-size: 50px;
+    margin-right: 5px;
+    margin-right: 20px;
+}
+
+.text-enter {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.Login a {
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.Login a:hover {
+    color: #FF6A00;
+}
+
+
+/* Ajustes na barra de navegação */
+
+nav {
+    background-color: #411982;
+    padding: 10px;
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FF6A00;
+}
+
+
+/* Linha colorida abaixo do menu */
+
+nav::after {
+    content: '';
+    display: block;
+    height: 4px;
+    background: linear-gradient(to right, #FF6A00, #FFCC00);
+    margin-top: 8px;
+}
+
+
+/* Banner */
+
+.banner {
+    padding: 100px 20px;
+    background-color: #411982;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+.banner-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.banner-content img {
+    width: 400px;
+    margin-right: 50px;
+}
+
+.banner-text {
+    color: white;
+    text-align: left;
+}
+
+.banner-text h1 {
+    font-size: 70px;
+    font-family: 'Arial Black', sans-serif;
+    letter-spacing: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner-text p {
+    font-size: 28px;
+    margin-top: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #f1f1f1;
+    padding: 20px 0;
+    border-top: 3px solid #FF6A00;
+    color: #333;
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 20px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #FF6A00;
+}
+
+.footer-info p {
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+}
+
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    p {
+        font-size: 0.9rem;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .search-bar {
+        margin-top: 10px;
+        width: 100%;
+    }
+    .search-bar input {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+    .banner {
+        padding: 20px;
+        height: auto;
+    }
+    .banner-content {
+        flex-direction: column;
+    }
+    .banner-text h1 {
+        font-size: 40px;
+    }
+    .banner-text p {
+        font-size: 20px;
+    }
+    .drone-flying {
+        width: 80px;
+        /* Ajuste o tamanho conforme necessário */
+        position: relative;
+        animation: fly 5s ease-in-out forwards;
+    }
+    /* Animação do drone voando da esquerda para a direita */
+    @keyframes fly {
+        0% {
+            transform: translateX(-300px);
+            /* Fora da tela */
+        }
+        100% {
+            transform: translateX(0);
+            /* Posição final */
+        }
+    }
+}
