@@ -1,0 +1,274 @@
+/* Resetando margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Estilos para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5; /* Cor de fundo da página */
+    color: #333;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* Cabeçalho com o logo */
+header {
+    background-color: #2a0088; /* Cor de fundo do cabeçalho */
+    padding: 20px;
+    text-align: left;
+}
+
+
+header .logo img {
+    max-width: 150px; /* Tamanho do logo */
+}
+
+
+/* Seção de identificação */
+.identificacao {
+    display: flex;
+    justify-content: flex-start; /* Alinhado à esquerda */
+    align-items: flex-start;
+    margin: 20px auto;
+    padding: 80px 50px 0 50px; /* Adiciona padding superior para descer os formulários */
+    width: 100%;
+}
+
+
+
+
+.titulo-identificacao {
+    flex-basis: 25%; /* Ocupa 25% da largura total */
+}
+
+
+.titulo-identificacao h1 {
+    color: #2a0088; /* Cor do título */
+    font-size: 3em; /* Tamanho da fonte */
+    position: relative;
+    top: -90px; /* Move o título 20px para cima */
+}
+
+
+/* Estilos para os formulários */
+.forms {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 60%; /* Ajusta a largura total ocupada pelos formulários */
+    max-width: 1200px;
+    padding: 0 20px; /* Padding interno da seção .forms */
+    margin: 0; /* Remove margens laterais */
+}
+
+
+.form-group {
+    flex: 1; /* Cada form-group ocupa o mesmo espaço */
+    margin: 0 20px; /* Margem entre os dois formulários */
+    max-width: 100%;
+    text-align: left; /* Alinha os textos à esquerda */
+}
+
+
+/* Ajuste específico para a seção "Quero criar uma conta" */
+.forms .form-group:first-child {
+    margin-left: -50px; /* Mova a seção "Quero criar uma conta" mais para a esquerda */
+}
+
+
+/* Ajustando a largura dos campos */
+.form-group input {
+    width: 90%; /* A barra de digitação ocupa 90% da largura do form */
+    padding: 16px; /* Aumentei o padding para dar mais espaço interno */
+    border: 1px solid #ddd;
+    border-radius: 20px; /* Bordas arredondadas */
+    margin-bottom: 15px;
+    font-size: 16px; /* Aumenta o tamanho da fonte para facilitar a leitura */
+}
+.form-group h2 {
+    font-size: 1.5em;
+    color: #000; /* Texto preto normal */
+    margin-bottom: 20px;
+}
+
+
+.form-group label {
+    display: block; /* Alterado para block para os labels ficarem acima dos inputs */
+    margin-bottom: 5px; /* Espaço abaixo do label */
+}
+
+
+.form-group input,
+.form-group button {
+    width: 100%; /* Faz os inputs e botões ocuparem toda a largura do formulário */
+    padding: 10px;
+    margin-bottom: 15px; /* Espaçamento entre os elementos */
+}
+
+
+.form-group button {
+    background-color: #00CF00; /* Cor do botão */
+    color: #ddd;
+    border: none;
+    border-radius: 20px; /* Bordas arredondadas nos botões */
+    cursor: pointer;
+}
+
+
+.form-group button:hover {
+    background-color: #008F3A; /* Efeito hover no botão */
+}
+
+
+.form-group .duvidas {
+    display: block;
+    margin-top: 10px;
+    color: #3E0A8D;
+    text-decoration: none;
+}
+
+
+.form-group .duvidas:hover {
+    text-decoration: underline;
+}
+
+
+/* Estilos para os formulários */
+.form-group input {
+    width: 90%; /* Expande a barra de digitação para 90% da largura do contêiner */
+    padding: 16px; /* Aumentei o padding para dar mais espaço interno */
+    border: 1px solid #ddd;
+    border-radius: 20px; /* Bordas arredondadas */
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+
+/* Botões continuam com a mesma largura */
+.form-group button {
+    width: 100%; /* Botões ocupam 100% da largura do contêiner */
+    padding: 12px;
+    background-color: #00B44B;
+    color: #ddd;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+
+
+/* Linha de separação entre os formulários */
+.linha-separacao {
+    width: 2px; /* Define a espessura (largura) da linha */
+    height: 250px; /* Define a altura da linha */
+    background-color: #ddd; /* Cor da linha */
+    margin: 0 60px; /* Espaço horizontal ao redor da linha (separação entre os campos) */
+    align-self: center; /* Garante que a linha esteja centralizada verticalmente */
+}
+
+
+/* Informações sobre a logo air place e drone */
+.air-place-title {
+    display: flex;
+    align-items: center; /* Alinha verticalmente o texto e a imagem */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    font-family: Arial, sans-serif;
+    color: #ddd; /* Define a cor do texto para branco */
+    font-family: Arial, sans-serif; /* Escolha a fonte que deseja */
+    font-size: 1.2em; /* Ajuste o tamanho da fonte conforme necessário */
+}
+
+
+.logo {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    position: relative;
+}
+
+
+.drone-image {
+    position: relative; /* Mantém a imagem na posição relativa ao texto */
+    top: -5px; /* Ajusta a posição vertical (aumente ou diminua conforme necessário) */
+    width: 60px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+    margin: 0 5px; /* Adiciona margens para espaçamento entre o texto */
+    z-index: 1; /* Coloca a imagem acima de outros elementos */
+}
+
+
+
+
+.air-text, .drone-text {
+    font-size: 1.2em; /* Ajuste o tamanho da fonte conforme necessário */
+    color: #ddd;
+    margin: 0 10px; /* Espaçamento horizontal entre o texto e a imagem */
+    margin-left: -8px;  /* Move a imagem para a esquerda sobrepondo o "R" */
+    margin-right: -8px;  /* Move a imagem para a direita sobrepondo o "P" */
+    z-index: 1; /* Coloca o texto atrás da imagem */
+    position: relative; /* Para permitir z-index funcionar corretamente */
+}
+
+
+/* Barra laranja abaixo da seção */
+.barra-laranja {
+    height: 3px;
+    background-color: #FFAA00;
+    margin-top: 70px; /* Aumenta a margem superior para descer a linha */
+    margin-bottom: 0px; /* Ajusta a margem inferior, se necessário */
+}
+
+
+/* Estilos para o rodapé */
+footer {
+    background-color: #ddd; /* Fundo branco na parte superior do rodapé */
+    padding: 20px;
+    text-align: center;
+    color: #333;
+    margin-top: 10px;
+}
+
+
+.footer-links {
+    margin-bottom: 10px;
+}
+
+
+.footer-links a {
+    color: #333;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* Linha que separa os links do CNPJ */
+.linha-rodape {
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+    margin: 20px 0;
+}
+
+
+footer p {
+    font-size: 0.9em;
+    color: #666;
+    text-align: left;  /* Alinha o texto à esquerda */
+    margin-left: 20px; /* Adiciona um pequeno recuo da esquerda */
+}
+
+
+

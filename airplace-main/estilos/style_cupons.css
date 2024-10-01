@@ -1,0 +1,278 @@
+@charset "UTF-8";
+
+
+/*
+CORES DO SITE
+PALETA DE CORES DO SITE
+#2A0088 = AZUL/ROXO
+#FF0000 = VERMELHO GRADIENTE
+#FFAA00 = LARANJA GRADIENTE
+#006FFF = AZUL BOTÃO
+#00CF00 = VERDE BOTÃO
+#FAFAFA = FUNDO DO SITE
+*/
+
+:root {
+    --cor0: #2A0088;
+    --cor1: #FF0000;
+    --cor2: #FFAA00;
+    --cor3: #006FFF;
+    --cor4: #00CF00;
+    --cor5: #FAFAFA;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor5);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+/* Ajustes no Header */
+
+header {
+    background-color: var(--cor0);
+    padding: 10px 0;
+    color: white;
+    border-bottom: solid 4px var(--cor4)
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    /* Aumentando o espaçamento lateral */
+}
+
+.logo img {
+    width: 200px;
+    /* Ajuste o tamanho da logo */
+}
+
+
+
+/*barra de pesquisa*/
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 40%;
+    margin-left: 10%;
+}
+
+.search-bar input {
+    flex-grow: 1;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 2px solid #FF6A00;
+    margin-right: 10px;
+}
+
+.search-bar button {
+    padding: 10px 15px;
+    border-radius: 50%;
+    background-color: #FF6A00;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 16px;
+}
+
+.search-bar button:hover {
+    background-color: #333;
+}
+
+
+/* Ajuste na Right Info */
+
+.right-info {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.right-top {
+    display: flex;
+}
+
+.location-icon i {
+    font-size: 50px;
+    margin-right: 5px;
+    margin-right: 20px;
+}
+
+.text-enter {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.Login a {
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.Login a:hover {
+    color: #FF6A00;
+}
+
+
+/* Ajustes na barra de navegação */
+
+nav {
+    display: flex;
+    height: 41px;
+    background-color: var(--cor0);
+    padding: 10px;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: -33px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FF6A00;
+}
+
+
+/* Linha colorida abaixo do menu */
+
+nav::after {
+    content: '';
+    display: block;
+    height: 4px;
+    background: linear-gradient(to right, var(--cor4), var(--cor2));
+    margin-top: 8px;
+}
+
+/*MAIN*/
+
+.main_cupom {
+    background-color: var(--cor0);
+    display: flex;
+    height: 30vh;
+    font-weight: 300;
+}
+
+.titulo_main_cupom {
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 34px;
+    margin: 15px;
+}
+
+.p_cupom {
+    font-weight: bold;
+}
+
+.img_cupom_white {
+    width: 11%;
+    margin-left: 2%;
+    margin-right: 8%;
+}
+
+.logo_main {
+    width: 15%;
+}
+
+/*SECTION */
+
+.cupons-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background-color: var(--cor5);
+}
+
+.cupom {
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    width: 29%;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.cupom:hover {
+    transform: scale(1.05);
+}
+
+.cupom img {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.cupom h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--cor0);
+}
+
+.cupom p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.cupom button {
+    padding: 10px 20px;
+    background-color: var(--cor3);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cupom button:hover {
+    background-color: var(--cor4);
+}
+
+.cupom-indisponivel button {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.cupom-indisponivel button:hover {
+    background-color: #ccc;
+}

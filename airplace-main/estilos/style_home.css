@@ -1,3 +1,27 @@
+@charset "UTF-8";
+
+
+/*
+CORES DO SITE
+PALETA DE CORES DO SITE
+#2A0088 = AZUL/ROXO
+#FF0000 = VERMELHO GRADIENTE
+#FFAA00 = LARANJA GRADIENTE
+#006FFF = AZUL BOTÃO
+#00CF00 = VERDE BOTÃO
+#FAFAFA = FUNDO DO SITE
+*/
+
+:root {
+    --cor0: #2A0088;
+    --cor1: #FF0000;
+    --cor2: #FFAA00;
+    --cor3: #006FFF;
+    --cor4: #00CF00;
+    --cor5: #FAFAFA;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +29,8 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    background-color: var(--cor5);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 16px;
     line-height: 1.6;
     display: flex;
@@ -13,34 +38,44 @@ body {
     height: 100%;
 }
 
+
 /* Ajustes no Header */
+
 header {
-    background-color: #2B1D60;
+    background-color: var(--cor0);
     padding: 10px 0;
     color: white;
+    border-bottom: solid 4px var(--cor4)
 }
 
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 40px; /* Aumentando o espaçamento lateral */
+    padding: 15px 40px;
+    /* Aumentando o espaçamento lateral */
 }
 
 .logo img {
-    width: 150px; /* Ajuste o tamanho da logo */
+    width: 200px;
+    /* Ajuste o tamanho da logo */
 }
+
+
+
+/*barra de pesquisa*/
 
 .search-bar {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
-    margin: 0 auto;
+    width: 40%;
+    margin-left: 10%;
 }
 
 .search-bar input {
     flex-grow: 1;
-    max-width: 400px;
     padding: 10px 20px;
     border-radius: 30px;
     border: 2px solid #FF6A00;
@@ -62,17 +97,32 @@ header {
     background-color: #333;
 }
 
+
 /* Ajuste na Right Info */
+
 .right-info {
     display: flex;
     align-items: center;
+    width: 300px;
+    flex-direction: column;
     gap: 10px;
     font-size: 14px;
 }
 
+.right-top {
+    display: flex;
+}
+
 .location-icon i {
-    font-size: 20px;
+    font-size: 50px;
     margin-right: 5px;
+    margin-right: 20px;
+}
+
+.text-enter {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .Login a {
@@ -85,11 +135,17 @@ header {
     color: #FF6A00;
 }
 
+
 /* Ajustes na barra de navegação */
+
 nav {
-    background-color: #411982;
+    display: flex;
+    height: 41px;
+    background-color: var(--cor0);
     padding: 10px;
-    position: relative;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: -33px;
 }
 
 nav ul {
@@ -113,16 +169,19 @@ nav ul li a:hover {
     color: #FF6A00;
 }
 
+
 /* Linha colorida abaixo do menu */
+
 nav::after {
     content: '';
     display: block;
     height: 4px;
-    background: linear-gradient(to right, #FF6A00, #FFCC00);
+    background: linear-gradient(to right, var(--cor4), var(--cor2));
     margin-top: 8px;
 }
 
 /* Banner */
+
 .banner {
     padding: 100px 20px;
     background-color: #411982;
@@ -163,7 +222,9 @@ nav::after {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+
 /* Footer */
+
 footer {
     background-color: #f1f1f1;
     padding: 20px 0;
@@ -201,69 +262,61 @@ footer {
     text-align: center;
 }
 
+
 /* Responsividade */
+
 @media (max-width: 768px) {
     h1 {
         font-size: 2rem;
     }
-
     p {
         font-size: 0.9rem;
     }
-
     nav ul {
         flex-direction: column;
         gap: 20px;
     }
-
     .header-container {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
-
     .search-bar {
         margin-top: 10px;
         width: 100%;
     }
-
     .search-bar input {
         width: 80%;
         margin-bottom: 10px;
     }
-
     .banner {
         padding: 20px;
         height: auto;
     }
-
     .banner-content {
         flex-direction: column;
     }
-
     .banner-text h1 {
         font-size: 40px;
     }
-
     .banner-text p {
         font-size: 20px;
     }
-
     .drone-flying {
-        width: 80px; /* Ajuste o tamanho conforme necessário */
+        width: 80px;
+        /* Ajuste o tamanho conforme necessário */
         position: relative;
         animation: fly 5s ease-in-out forwards;
     }
-    
     /* Animação do drone voando da esquerda para a direita */
     @keyframes fly {
         0% {
-            transform: translateX(-300px); /* Fora da tela */
+            transform: translateX(-300px);
+            /* Fora da tela */
         }
         100% {
-            transform: translateX(0); /* Posição final */
+            transform: translateX(0);
+            /* Posição final */
         }
     }
-
-    
 }

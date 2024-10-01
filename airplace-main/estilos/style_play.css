@@ -1,0 +1,684 @@
+@charset "UTF-8";
+
+
+/*
+CORES DO SITE
+PALETA DE CORES DO SITE
+#2A0088 = AZUL/ROXO
+#FF0000 = VERMELHO GRADIENTE
+#FFAA00 = LARANJA GRADIENTE
+#006FFF = AZUL BOTÃO
+#00CF00 = VERDE BOTÃO
+#FAFAFA = FUNDO DO SITE
+*/
+
+:root {
+    --cor0: #2A0088;
+    --cor1: #FF0000;
+    --cor2: #FFAA00;
+    --cor3: #006FFF;
+    --cor4: #00CF00;
+    --cor5: #FAFAFA;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor5);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+/* Ajustes no Header */
+
+header {
+    background-color: var(--cor0);
+    padding: 10px 0;
+    color: white;
+    border-bottom: solid 4px var(--cor4)
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    /* Aumentando o espaçamento lateral */
+}
+
+.logo img {
+    width: 200px;
+    /* Ajuste o tamanho da logo */
+}
+
+
+
+/*barra de pesquisa*/
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 40%;
+    margin-left: 10%;
+}
+
+.search-bar input {
+    flex-grow: 1;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 2px solid #FF6A00;
+    margin-right: 10px;
+}
+
+.search-bar button {
+    padding: 10px 15px;
+    border-radius: 50%;
+    background-color: #FF6A00;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 16px;
+}
+
+.search-bar button:hover {
+    background-color: #333;
+}
+
+
+/* Ajuste na Right Info */
+
+.right-info {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.right-top {
+    display: flex;
+}
+
+.location-icon i {
+    font-size: 50px;
+    margin-right: 5px;
+    margin-right: 20px;
+}
+
+.text-enter {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.Login a {
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.Login a:hover {
+    color: #FF6A00;
+}
+
+
+/* Ajustes na barra de navegação */
+
+nav {
+    display: flex;
+    height: 41px;
+    background-color: var(--cor0);
+    padding: 10px;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: -33px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FF6A00;
+}
+
+
+/* Linha colorida abaixo do menu */
+
+nav::after {
+    content: '';
+    display: block;
+    height: 4px;
+    background: linear-gradient(to right, var(--cor4), var(--cor2));
+    margin-top: 8px;
+}
+
+/* Estilo para o container principal da página */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Estilo para o carrossel */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+/* Estilo para o contêiner interno do carrossel, que se move horizontalmente */
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+/* Estilo para cada item do carrossel, com largura mínima de 100% */
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+/* Estilo para os vídeos dentro dos itens do carrossel */
+.carousel-item video {
+    width: 100%;
+    border-radius: 10px;
+}
+/* Estilo para os controles do carrossel */
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+/* Estilo para os botões de controle do carrossel */
+.carousel-button {
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5em;
+    border-radius: 50%;
+}
+/* Estilo para os botões de controle quando o mouse passa sobre eles */
+.carousel-button:hover {
+    background: rgba(0,0,0,0.8);
+}
+.interaction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px;
+}
+.like-button, .comment-button {
+    cursor: pointer;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+}
+.like-button i, .comment-button i {
+    margin-right: 10px;
+}
+.comments-section {
+    margin-top: 10px;
+    display: none;
+}
+.comments-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.comment-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.liked i {
+    color: red;
+}
+.delete-icon {
+    margin-left: 10px;
+    color: gray; 
+    font-size: 16px;    
+}
+
+.delete-icon:hover {
+    color: black; 
+}
+
+    /* Mantém os estilos padrões para dispositivos maiores */
+
+/* Responsividade para telas pequenas (celulares) */
+@media (max-width: 768px) {
+/* Reduz a largura do container principal para se ajustar melhor a telas pequenas */
+.container {
+width: 100%;
+margin: 0;
+padding: 10px;
+}
+
+/* Ajusta o layout do cabeçalho para se adequar melhor em telas menores */
+.header-container {
+flex-direction: column;
+align-items: center;
+text-align: center;
+}
+
+.logo img {
+width: 100px;
+}
+
+.search-bar {
+width: 100%;
+margin-top: 10px;
+}
+
+.search-bar input {
+width: 80%;
+}
+
+.right-info {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.right-info p {
+margin: 5px 0;
+}
+
+/* Reorganiza o menu de navegação para caber melhor em telas menores */
+nav ul {
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0;
+}
+
+nav ul li {
+margin: 5px 0;
+}
+
+/* Ajusta o carrossel para caber em telas menores */
+.carousel {
+max-width: 100%;
+}
+
+.carousel-item video {
+border-radius: 0;
+}
+
+.carousel-controls {
+top: 40%;
+}
+
+/* Ajusta os botões de controle para serem menores em telas de celular */
+.carousel-button {
+padding: 5px;
+font-size: 1.2em;
+}
+
+/* Ajusta a barra de interação para caber melhor em telas menores */
+.interaction {
+flex-direction: column;
+align-items: center;
+}
+
+.interaction span {
+margin-bottom: 1px;
+}
+
+/* Estilos para o rodapé em telas pequenas */
+.footer-links ul {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.footer-links ul li {
+margin: 5px 0;
+}
+
+.footer-info {
+text-align: center;
+font-size: 0.9em;
+}
+}
+
+/* Footer */
+footer {
+    background-color: #f1f1f1;
+    padding: 20px 0;
+    border-top: 3px solid #FF6A00;
+    color: #333;
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 20px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #FF6A00;
+}
+
+.footer-info p {
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .search-bar {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .search-bar input {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+
+    .banner {
+        padding: 20px;
+        height: auto;
+    }
+
+    .banner-content {
+        flex-direction: column;
+    }
+
+    .banner-text h1 {
+        font-size: 40px;
+    }
+
+    .banner-text p {
+        font-size: 20px;
+    }
+
+    .drone-flying {
+        width: 80px; /* Ajuste o tamanho conforme necessário */
+        position: relative;
+        animation: fly 5s ease-in-out forwards;
+    }
+    
+    /* Animação do drone voando da esquerda para a direita */
+    @keyframes fly {
+        0% {
+            transform: translateX(-300px); /* Fora da tela */
+        }
+        100% {
+            transform: translateX(0); /* Posição final */
+        }
+    }
+            /* Estilo para o container principal da página */
+            .container {
+                width: 80%;
+                margin: auto;
+                overflow: hidden;
+            }
+          
+            /* Estilo para o carrossel */
+            .carousel {
+                position: relative;
+                width: 100%;
+                max-width: 800px;
+                margin: 20px auto;
+                overflow: hidden;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            }
+            /* Estilo para o contêiner interno do carrossel, que se move horizontalmente */
+            .carousel-inner {
+                display: flex;
+                transition: transform 0.5s ease;
+            }
+            /* Estilo para cada item do carrossel, com largura mínima de 100% */
+            .carousel-item {
+                min-width: 100%;
+                box-sizing: border-box;
+            }
+            /* Estilo para os vídeos dentro dos itens do carrossel */
+            .carousel-item video {
+                width: 100%;
+                border-radius: 10px;
+            }
+            /* Estilo para os controles do carrossel */
+            .carousel-controls {
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                transform: translateY(-50%);
+            }
+            /* Estilo para os botões de controle do carrossel */
+            .carousel-button {
+                background: rgba(0,0,0,0.5);
+                color: #fff;
+                border: none;
+                padding: 10px;
+                cursor: pointer;
+                font-size: 1.5em;
+                border-radius: 50%;
+            }
+            /* Estilo para os botões de controle quando o mouse passa sobre eles */
+            .carousel-button:hover {
+                background: rgba(0,0,0,0.8);
+            }
+            .interaction {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 10px;
+                padding: 10px;
+            }
+            .like-button, .comment-button {
+                cursor: pointer;
+                font-size: 1.2em;
+                display: flex;
+                align-items: center;
+            }
+            .like-button i, .comment-button i {
+                margin-right: 10px;
+            }
+            .comments-section {
+                margin-top: 10px;
+                display: none;
+            }
+            .comments-list {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            .comment-input {
+                width: 100%;
+                padding: 10px;
+                margin-top: 10px;
+                box-sizing: border-box;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+            }
+            .liked i {
+                color: red;
+            }
+            .delete-icon {
+                margin-left: 10px;
+                color: gray; 
+                font-size: 16px;    
+            }
+
+            .delete-icon:hover {
+                color: black; 
+            }
+
+                /* Mantém os estilos padrões para dispositivos maiores */
+
+    /* Responsividade para telas pequenas (celulares) */
+    @media (max-width: 768px) {
+        /* Reduz a largura do container principal para se ajustar melhor a telas pequenas */
+        .container {
+            width: 100%;
+            margin: 0;
+            padding: 10px;
+        }
+
+        /* Ajusta o layout do cabeçalho para se adequar melhor em telas menores */
+        .header-container {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .logo img {
+            width: 100px;
+        }
+
+        .search-bar {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .search-bar input {
+            width: 80%;
+        }
+
+        .right-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .right-info p {
+            margin: 5px 0;
+        }
+
+        /* Reorganiza o menu de navegação para caber melhor em telas menores */
+        nav ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 5px 0;
+        }
+
+        /* Ajusta o carrossel para caber em telas menores */
+        .carousel {
+            max-width: 100%;
+        }
+
+        .carousel-item video {
+            border-radius: 0;
+        }
+
+        .carousel-controls {
+            top: 40%;
+        }
+ 
+        /* Ajusta os botões de controle para serem menores em telas de celular */
+        .carousel-button {
+            padding: 5px;
+            font-size: 1.2em;
+        }
+
+        /* Ajusta a barra de interação para caber melhor em telas menores */
+        .interaction {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .interaction span {
+            margin-bottom: 1px;
+        }
+
+        /* Estilos para o rodapé em telas pequenas */
+        .footer-links ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-links ul li {
+            margin: 5px 0;
+        }
+
+        .footer-info {
+            text-align: center;
+            font-size: 0.9em;
+        }
+    }
+    
+}
